@@ -19,13 +19,13 @@ TagManager:
   - Enemie
   - Player
   - Sounds
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - OpenMinder
+  - Wall
+  - Door
+  - EnemyAttack
+  - Prop
+  - Card
+  - NPC
   - 
   - 
   - 
