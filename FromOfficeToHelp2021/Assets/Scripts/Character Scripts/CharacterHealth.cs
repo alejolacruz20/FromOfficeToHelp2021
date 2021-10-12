@@ -12,6 +12,7 @@ public class CharacterHealth : MonoBehaviour
     public GameObject defeatUI;
     public bool destroy = true;
     public Animator deathanim;
+    public AudioSource characterSounds;
     //public int amount;
 
     void Start()
@@ -34,6 +35,7 @@ public class CharacterHealth : MonoBehaviour
             if (healthBar)
             {
                 healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
+
             }
 
             if(currentHitPoints <= 0)
