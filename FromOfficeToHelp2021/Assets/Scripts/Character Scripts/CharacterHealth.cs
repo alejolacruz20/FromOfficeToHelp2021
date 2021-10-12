@@ -12,7 +12,7 @@ public class CharacterHealth : MonoBehaviour
     public GameObject defeatUI;
     public bool destroy = true;
     public Animator deathanim;
-    public AudioSource characterSounds;
+    public AudioSource characterDamage;
     //public int amount;
 
     void Start()

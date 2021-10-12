@@ -16048,7 +16048,7 @@ MonoBehaviour:
   defeatUI: {fileID: 0}
   destroy: 0
   deathanim: {fileID: 0}
-  characterSounds: {fileID: 0}
+  characterDamage: {fileID: 0}
 --- !u!82 &1705233646
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16256,7 +16256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e513e31c8a675439a9dccddc4f9f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 2
+  maxHitPoints: 8
   currentHitPoints: 0
   isTheBoss: 0
   chronometer: 0
@@ -18491,7 +18491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e513e31c8a675439a9dccddc4f9f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 2
+  maxHitPoints: 8
   currentHitPoints: 0
   isTheBoss: 0
   chronometer: 0
@@ -20421,6 +20421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: isTheBoss
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766150122330033412, guid: ee9fb54e76bab5f4e8df705b49b274be,
+        type: 3}
+      propertyPath: maxHitPoints
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1795874217499594458, guid: ee9fb54e76bab5f4e8df705b49b274be,
         type: 3}
