@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3029094151529386832}
   - component: {fileID: 4348844217313776461}
   - component: {fileID: -1360789436394818414}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: OpenMind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3947680425978601971}
   - component: {fileID: 2545933234448353680}
   - component: {fileID: 1055564027606026216}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Cube_Cube.001_Material.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
