@@ -35,6 +35,7 @@ public class CharacterHealth : MonoBehaviour
             if (healthBar)
             {
                 healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
+                characterDamage.Play();
 
             }
 
