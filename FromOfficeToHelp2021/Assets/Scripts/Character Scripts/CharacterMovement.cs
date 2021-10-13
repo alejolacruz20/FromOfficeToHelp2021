@@ -7,8 +7,28 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12f;
+    public float baseSpeed = 12f;
+    public float speed;
     public Vector3 MoveDirection;
+
+    private void Start()
+    {
+        speed = baseSpeed;
+    }
+
+    public void SpeedVariation(float amount)
+    {
+        if (amount > 0)
+        {
+            speed -= baseSpeed * amount;
+            //startChronometer = true;
+        }
+        else
+        {
+            speed = baseSpeed;
+        }
+
+    }
 
     void Update()
     {

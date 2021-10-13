@@ -12,6 +12,8 @@ public class RandomMovement : MonoBehaviour
     public GameObject target;
     public Animator movementAndAttack;
     public bool inAttack;
+    public float walkSpeed;
+    public float runSpeed;
     /*public float damage;
     public float damageChronometer;*/
 
@@ -64,7 +66,7 @@ public class RandomMovement : MonoBehaviour
 
                 case 2:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angle, 5);
-                    transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+                    transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime);
                     movementAndAttack.SetBool("Walk", true);
                     break;
             }
@@ -79,7 +81,7 @@ public class RandomMovement : MonoBehaviour
                 var rotation = Quaternion.LookRotation(lookPosition);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 3);
                 movementAndAttack.SetBool("Walk", false);
-                transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+                transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
                 movementAndAttack.SetBool("Run", true);
 
             }
