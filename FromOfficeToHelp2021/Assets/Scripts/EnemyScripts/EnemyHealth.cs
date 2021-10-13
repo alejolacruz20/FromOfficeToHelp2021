@@ -14,10 +14,12 @@ public class EnemyHealth : MonoBehaviour
     public Animator anim;
     public RandomMovement enemyRandomMovement;
     public Waypoints enemyWaypointMovement;
+    public GameObject victoryZone;
 
     void Start()
     {
         currentHitPoints = maxHitPoints;
+        victoryZone.SetActive(false);
     }
 
     private void Update()
@@ -47,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("DeathEnemy");
                     Destroy(this.gameObject);
                     Cursor.lockState = CursorLockMode.None;
-                    SceneManager.LoadScene("Victory");
+                    victoryZone.SetActive(true);
                 }
                 else
                 {
