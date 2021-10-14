@@ -48,7 +48,6 @@ public class EnemyHealth : MonoBehaviour
                     Debug.Log("EnemigoMuerto");
                     FindObjectOfType<AudioManager>().Play("DeathEnemy");
                     Destroy(this.gameObject);
-                    Cursor.lockState = CursorLockMode.None;
                     victoryZone.SetActive(true);
                 }
                 else
