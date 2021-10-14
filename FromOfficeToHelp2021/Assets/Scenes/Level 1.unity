@@ -18628,13 +18628,13 @@ MonoBehaviour:
   sounds:
   - name: Ambiente
     clip: {fileID: 8300000, guid: baf4ce4b7fd2688449baf1cf4e0891b5, type: 3}
-    Volume: 0.081
+    Volume: 0.09
     Pitch: 1
     Loop: 1
     source: {fileID: 0}
   - name: Dash
     clip: {fileID: 8300000, guid: 3efa3ac05467bbf49a396f73caa2ed22, type: 3}
-    Volume: 0.099
+    Volume: 0.09
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
@@ -18652,25 +18652,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: OpenDoor
     clip: {fileID: 8300000, guid: 3de175eeeaae5d142b6af723659e8c82, type: 3}
-    Volume: 1
+    Volume: 0.5
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
   - name: UnlockDoor
     clip: {fileID: 8300000, guid: 0ed9125ea8faf514dbd004e6e457e0a6, type: 3}
-    Volume: 1
+    Volume: 0.05
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
   - name: DeathEnemy
     clip: {fileID: 8300000, guid: c8aed5915eb76334f869d47d04b81cff, type: 3}
-    Volume: 0.04
+    Volume: 0.02
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
   - name: MusicLVL1
     clip: {fileID: 8300000, guid: c8c2d58d2c407f9428fabe3aff2cda76, type: 3}
-    Volume: 0.04
+    Volume: 0.03
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
