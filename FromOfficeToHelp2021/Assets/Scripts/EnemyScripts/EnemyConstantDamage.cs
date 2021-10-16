@@ -89,14 +89,14 @@ public class EnemyConstantDamage : MonoBehaviour
                     startChronometer = true;
                 }
 
-                chronometer += 1 * Time.deltaTime;
+                chronometer += Time.deltaTime;
 
                 if (chronometer >= damageLimitChronometer)
                 {
+                    chronometer = 0;
                     //target.GetComponent<EnemyLife>().ColorChangeDamage(damage);
                     target.GetComponent<CharacterHealth>().TakeDamage(damage);
                     Debug.Log(damage + " de daño");
-                    chronometer = 0;
                 }
                 break;
 
