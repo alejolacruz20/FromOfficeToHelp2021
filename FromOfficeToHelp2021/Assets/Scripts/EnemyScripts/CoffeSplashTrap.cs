@@ -10,17 +10,17 @@ public class CoffeSplashTrap : MonoBehaviour
 
     private void OnTriggerEnter(Collider target)
     {
-        CharacterHealth damageEnemy = target.gameObject.GetComponent<CharacterHealth>();
+        CharacterHealth damageEnemy = target.gameObject.GetComponent<CharacterHealth>(); //Pedimos el gameObject del Player
         if (damageEnemy != null)
         {
-            damageEnemy.TakeDamage(damage);
+            damageEnemy.TakeDamage(damage); //Hacemos daño
         }
     }
 
     private void OnTriggerStay(Collider target)
     {
         CharacterHealth damageEnemy = target.gameObject.GetComponent<CharacterHealth>();
-        if (damageEnemy != null)
+        if (damageEnemy != null) //Pedimos si el gameObject no es null y hacemos daño por segundo
         {
             chronometer += 1 * Time.deltaTime;
             if (chronometer >= 2)

@@ -17,16 +17,16 @@ public class BrokenCoffeMachine : MonoBehaviour
     private void Update()
     {
 
-        if (Vector3.Distance(target.transform.position, transform.position) < 2 && splash == false)
+        if (Vector3.Distance(target.transform.position, transform.position) < 2 && splash == false) //Preguntamos si está dentro de la distancia pedida
         {
             splash = true;
-            coffe.SetActive(true);
+            coffe.SetActive(true); //Ponemos el charco de cafe en true
         }
     }
 
     private void CoffeSplashOff()
     {
         splash = false;
-        coffe.SetActive(false);
+        coffe.SetActive(false); //Ponemos el charco de cafe en false
     }
 }

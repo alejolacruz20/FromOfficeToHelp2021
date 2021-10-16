@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
         speed = baseSpeed;
     }
 
-    public void SpeedVariation(float amount)
+    public void SpeedVariation(float amount) //Pedimos un valor para saber cuanta velocidad tenemos
     {
         if (amount > 0)
         {

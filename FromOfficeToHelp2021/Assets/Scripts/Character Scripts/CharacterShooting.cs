@@ -17,7 +17,7 @@ public class CharacterShooting : MonoBehaviour
 
             for (int i = 0; i < shootingPoints.Length; i++)
             {
-                Instantiate(disparoPrefab, shootingPoints[i].position, shootingPoints[i].rotation);
+                Instantiate(disparoPrefab, shootingPoints[i].position, shootingPoints[i].rotation); //instanciamos una bala
             }
         }
     }

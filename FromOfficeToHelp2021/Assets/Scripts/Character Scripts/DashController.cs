@@ -23,7 +23,7 @@ public class DashController : MonoBehaviour
     void Update()
     {
         dash_Timer += Time.deltaTime;
-        if (dash_Timer > current_dashTimer)
+        if (dash_Timer > current_dashTimer) //Controla el tiempo para saber si podemos dashear
         {
             canDash = true;
         }
@@ -36,15 +36,15 @@ public class DashController : MonoBehaviour
 
     IEnumerator Dash()
     {
-        if (canDash)
+        if (canDash) //Preguntamos si está dentro del tiempo para dashear
         {
             canDash = false;
             dash_Timer = 0f;
             float StartTime = Time.time;
-            FindObjectOfType<AudioManager>().Play("Dash");
+            FindObjectOfType<AudioManager>().Play("Dash"); //Reproducimos el sonido
             while (Time.time < StartTime + DashTime)
             {
-                MoveScript.controller.Move(MoveScript.MoveDirection * DashSpeed * Time.deltaTime);
+                MoveScript.controller.Move(MoveScript.MoveDirection * DashSpeed * Time.deltaTime); //Movimiento del dash
 
                 yield return null;
             }

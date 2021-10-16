@@ -26,9 +26,9 @@ public class CharacterHealth : MonoBehaviour
         //TakeDamage(amount);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount) //Pedimos un int para saber cuanto daño nos hacen
     {
-        if (amount > 0 && currentHitPoints > 0)
+        if (amount > 0 && currentHitPoints > 0) //Vida mayor a cero
         {
             currentHitPoints -= amount;
 
@@ -39,7 +39,7 @@ public class CharacterHealth : MonoBehaviour
 
             }
 
-            if(currentHitPoints <= 0)
+            if(currentHitPoints <= 0) //Vida igual o menor a cero, muerto
             {
                 Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene("Defeat");
@@ -58,9 +58,9 @@ public class CharacterHealth : MonoBehaviour
         //}
     }
 
-    public void Heal(int amount)
+    public void Heal(int amount) //Pedimos un valor entero para saber cuanto curarnos
     {
-        if (amount > 0 && currentHitPoints < baseHitPoints)
+        if (amount > 0 && currentHitPoints < baseHitPoints) //Condición para no pasarnos del máximo
         {
             currentHitPoints += amount;
             if (currentHitPoints > baseHitPoints)
@@ -73,6 +73,6 @@ public class CharacterHealth : MonoBehaviour
 
     public void Disappear()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject); //Destruimos el objeto
     }
 }

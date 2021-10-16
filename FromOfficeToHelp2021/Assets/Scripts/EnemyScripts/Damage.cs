@@ -11,7 +11,7 @@ public class Damage : MonoBehaviour
         CharacterHealth damageEnemy = target.gameObject.GetComponent<CharacterHealth>();
         if (damageEnemy != null)
         {
-            damageEnemy.TakeDamage(damage);
+            damageEnemy.TakeDamage(damage); //Hacemos daño al target pedido
         }
     }
 }

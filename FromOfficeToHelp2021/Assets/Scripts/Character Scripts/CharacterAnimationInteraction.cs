@@ -20,29 +20,29 @@ public class CharacterAnimationInteraction : MonoBehaviour
 
     private void Update()
     {
-        cronometer += Time.deltaTime;
+        cronometer += Time.deltaTime; //Tomamos como referencia para el enfriamiento
         InputCharacter();
 
         if (Input.GetKeyDown(KeyCode.E) && doingTheAnimation == false)
         {
             doingTheAnimation = true;
-            characterAnimator.SetBool("Interact", true);
+            characterAnimator.SetBool("Interact", true); //PIDE LA TECLA E Y PONE LA ANIMACIÓN DE INTERACT EN TRUE
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && doingTheAnimation == false)
         {
             doingTheAnimation = true;
-            characterAnimator.SetBool("Defense", true);
+            characterAnimator.SetBool("Defense", true); //PIDE LA TECLA Q Y PONE LA ANIMACION DE DEFENSE EN TRUE
         }
     }
 
-    public void Defensefinished()
+    public void Defensefinished() //Funcion para ponerlo en falso
     {
         doingTheAnimation = false;
         characterAnimator.SetBool("Defense", false);
     }
 
-    public void InteractionFinished()
+    public void InteractionFinished() //Funcion para ponerlo en falso
     {
         doingTheAnimation = false;
         characterAnimator.SetBool("Interact", false);
@@ -50,7 +50,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
 
     public void InputCharacter()
     {
-        if (currentCronometer <= cronometer)
+        if (currentCronometer <= cronometer) //Enfriamiento
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && doingTheAnimation == false) // Dentro del Update llamar a esta funcion 
             {
@@ -65,11 +65,11 @@ public class CharacterAnimationInteraction : MonoBehaviour
     {
         for (int i = 0; i < bulletSpawner.Length; i++)
         {
-            Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation);
+            Instantiate(bullet, bulletSpawner[i].position, bulletSpawner[i].rotation); //Instanciamos una bala
         }
     }
 
-    public void AttackFinished()
+    public void AttackFinished() //Funcion para poner en falso el ataque
     {
         doingTheAnimation = false;
         characterAnimator.SetBool("Attack", false);
