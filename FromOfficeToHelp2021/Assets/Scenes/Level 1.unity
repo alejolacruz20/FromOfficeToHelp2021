@@ -6360,7 +6360,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 5.3e-43, y: 6e-45, z: 5.7e-44, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9615,7 +9615,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -1.7014118e+38, y: 122.45898, z: 7.28768e+36, w: -0.000000103428626}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10733,18 +10733,6 @@ CapsuleCollider:
   m_Height: 0.09
   m_Direction: 1
   m_Center: {x: 0, y: 0.04, z: 0}
---- !u!114 &821835305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821835302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d25e671347ca5459a68fc7e63d38eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &821835306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10764,18 +10752,6 @@ MonoBehaviour:
   characterAnimator: {fileID: 821835303}
   currentCronometer: 0
   cronometer: 1
---- !u!114 &821835307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821835302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97ea25ef64561dc4a8b1d2903f1956fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &828349131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18684,6 +18660,12 @@ MonoBehaviour:
     Pitch: 1
     Loop: 0
     source: {fileID: 0}
+  - name: CharacterDMG
+    clip: {fileID: 8300000, guid: 10cf64e7ccf425d42a3c16d4a8736a43, type: 3}
+    Volume: 0.02
+    Pitch: 1
+    Loop: 0
+    source: {fileID: 0}
 --- !u!4 &1788328184
 Transform:
   m_ObjectHideFlags: 0
@@ -20222,7 +20204,7 @@ MonoBehaviour:
   anim: {fileID: 1952940545}
   enemyRandomMovement: {fileID: 0}
   enemyWaypointMovement: {fileID: 1952940548}
-  victoryZone: {fileID: 0}
+  victoryZone: {fileID: 1621207059}
 --- !u!1 &1955686013
 GameObject:
   m_ObjectHideFlags: 0
@@ -24062,7 +24044,7 @@ PrefabInstance:
     - target: {fileID: 5970691565987012964, guid: d5edffddced84ed4b80ce66d834aeb6c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6123219373946544208, guid: d5edffddced84ed4b80ce66d834aeb6c,
         type: 3}
