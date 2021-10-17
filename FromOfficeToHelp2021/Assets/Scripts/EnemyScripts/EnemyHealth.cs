@@ -6,14 +6,17 @@ public class EnemyHealth : GeneralEntitiesLife
 {
     public Animator anim;
     public RandomMovement randomMovement;
-
+    public Waypoints waypointMovement;
     public override void ZeroLife()
     {
         //Se cancela el movimiento
-        randomMovement.enabled = false;
+        if (randomMovement != null)
+            randomMovement.enabled = false;
+        else if (waypointMovement != null)
+            waypointMovement.enabled = false;
         //Hace la animacion de muerte
         //Y sigue con el ZeroLife normal 
-        base.ZeroLife();
+            base.ZeroLife();
     }
 
 }
