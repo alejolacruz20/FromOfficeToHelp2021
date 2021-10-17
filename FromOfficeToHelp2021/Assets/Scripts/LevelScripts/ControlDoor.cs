@@ -5,10 +5,9 @@ using UnityEngine;
 //Creador: Alejo Lacruz
 public class ControlDoor : MonoBehaviour
 {
-    public Animator anim;
+    Animator anim;
     bool Dentro = false;
     bool puerta;
-
 
     void Start()
     {
