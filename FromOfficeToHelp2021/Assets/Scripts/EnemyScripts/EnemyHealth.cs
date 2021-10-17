@@ -4,18 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Creador: Gabriel Ceriani
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : GeneralEntitiesLife
 {
+    #region VARIABLES
     public int maxHitPoints;
-    public int currentHitPoints;
     public bool isTheBoss;
-    public float chronometer;
-    public float limitChronometer = 1.2f;
     public Animator anim;
     public RandomMovement enemyRandomMovement;
     public Waypoints enemyWaypointMovement;
     public GameObject victoryZone;
-
+    #endregion
+    #region CODIGO
     void Start()
     {
         currentHitPoints = maxHitPoints;
@@ -64,13 +63,9 @@ public class EnemyHealth : MonoBehaviour
                     {
                         enemyRandomMovement.enabled = false;
                     }
-
-                    //if (chronometer >= limitChronometer)
-                    //{
-                    //   Destroy(this.gameObject);
-                    //}
                 }
             }
         }
     }
+    #endregion
 }

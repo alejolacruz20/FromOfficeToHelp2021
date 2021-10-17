@@ -10,7 +10,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
     public bool doingTheAnimation;
     public Animator characterAnimator;
     public float currentCronometer;
-    public float cronometer = 1f;
+    public float cronometer = 1.5f;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class CharacterAnimationInteraction : MonoBehaviour
         doingTheAnimation = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         cronometer += Time.deltaTime; //Tomamos como referencia para el enfriamiento
         InputCharacter();
