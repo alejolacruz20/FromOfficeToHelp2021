@@ -2,29 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletDamage : MonoBehaviour
+public class BulletDamage : GeneralHit
 {
-    public int damage;
+    //Por la herencia tiene el OntriggerEnter 
+    //Lo unico que se agrega aca es el movimiento de la bala
     public float speed;
-    void Update()
+    public override void OnTriggerEnter(Collider target)
     {
-        transform.position += transform.forward * speed * Time.deltaTime; //Movimiento de la bala
+        base.OnTriggerEnter(target);
+        Destroy(this.gameObject);
     }
-    private void OnTriggerEnter(Collider target) 
+
+    private void Update()
     {
-        EnemyHealth damageEnemy = target.gameObject.GetComponent<EnemyHealth>();
-        CharacterHealth damagePlayer = target.gameObject.GetComponent<CharacterHealth>();
-        if (damageEnemy != null)//Preguntamos si chocamos con el enemigo
-        {
-            damageEnemy.ColorChangeDamage(damage);
-        }
-        if (damagePlayer != null)//Preguntamos si chocamos con el player
-        {
-            damagePlayer.TakeDamage(damage);
-        }
-        if (target.tag == "Walls" || target.tag == "Enemy" || target.tag == "Player") //Agregamos tambien la pared y lo destruimos
-        {
-            Destroy(this.gameObject);
-        }
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
+
 }

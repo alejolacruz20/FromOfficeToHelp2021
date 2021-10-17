@@ -14,6 +14,8 @@ public class RandomMovement : MonoBehaviour
     public bool inAttack;
     public float walkSpeed;
     public float runSpeed;
+    public float maxVision;
+    public float mediumVision;
     /*public float damage;
     public float damageChronometer;*/
 
@@ -30,7 +32,7 @@ public class RandomMovement : MonoBehaviour
 
     public void EnemyBehaviour()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 10)
+        if (Vector3.Distance(transform.position, target.transform.position) > maxVision)
         {
             movementAndAttack.SetBool("Run", false);
 
@@ -73,7 +75,7 @@ public class RandomMovement : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, target.transform.position) > 5 && !inAttack == false)
+            if (Vector3.Distance(transform.position, target.transform.position) > mediumVision && !inAttack == false)
             {
                 movementAndAttack.SetBool("Attack", false);
                 var lookPosition = target.transform.position - transform.position;

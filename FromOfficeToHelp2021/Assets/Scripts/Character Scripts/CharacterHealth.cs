@@ -3,59 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-//Creador: Federico Paradiso
+
 public class CharacterHealth : GeneralEntitiesLife
 {
-    #region VARIABLES
     public Image healthBar;
     public GameObject defeatUI;
-    public bool destroy = true;
-    public Animator deathanim;
-    public AudioSource characterDamage;
-    #endregion
-    #region CODIGO
-    void Start()
+    public Animation anim;
+
+    public override void TakeDamage(int amount)
     {
-        deathanim = GetComponent<Animator>();
-        currentHitPoints = baseHitPoints;
+        //Ejecuta normalmente el TakeDamage, pero se le agrega la actualizacion de la barra de vida
+
+        base.TakeDamage(amount);
+        if (healthBar)
+        {
+            healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
+        }
     }
 
-    public override void TakeDamage(int amount) //Pedimos un int para saber cuanto daño nos hacen
+    public void Heal(int amount)
     {
-        if (amount > 0 && currentHitPoints > 0) //Vida mayor a cero
+        //Curacion del personaje
+
+        if (amount > 0 && currentHitPoints < baseHitPoints)
         {
-            currentHitPoints -= amount;
-
-            if (healthBar)
+            currentHitPoints += amount;
+            if (currentHitPoints > baseHitPoints)
             {
+                currentHitPoints = baseHitPoints;
                 healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
-                FindObjectOfType<AudioManager>().Play("CharacterDMG");
-
-            }
-
-            if(currentHitPoints <= 0) //Vida igual o menor a cero, muerto
-            {
-                Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene("Defeat");
             }
         }
- 
     }
-    // NO BORRAR ESTO!!! - -  - - --  - - - -- - - - - - - - - - - - -  -
 
+    public override void ZeroLife()
+    {
+        //Animacion de muerte 
 
-    // - - - - - - - - -- - - - - - - - - - - - - - - -  - - - - - - - - - - - -
-    //public void Heal(int amount) //Pedimos un valor entero para saber cuanto curarnos
-    //{
-    //    if (amount > 0 && currentHitPoints < baseHitPoints) //Condición para no pasarnos del máximo
-    //    {
-    //        currentHitPoints += amount;
-    //        if (currentHitPoints > baseHitPoints)
-    //        {
-    //            currentHitPoints = baseHitPoints;
-    //            healthBar.fillAmount = (float)currentHitPoints / baseHitPoints;
-    //        }
-    //    }
-    //}
-    #endregion
+    }
+
+    public override void Death()
+    {
+        //Va a la pantalla de derrota
+    }
+
 }

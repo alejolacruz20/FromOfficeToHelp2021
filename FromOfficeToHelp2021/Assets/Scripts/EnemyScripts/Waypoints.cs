@@ -36,6 +36,8 @@ public class Waypoints : MonoBehaviour
     {
         if (Vector3.Distance(playerTarget.transform.position, transform.position) > minDistance)
         {
+            anim.SetBool("PlayerAttack", false);
+            fightingPlayer = false;
             transform.Translate(new Vector3(0, 0, 2 * Time.deltaTime));
             transform.LookAt(waypoints[_waypointIndex].position);
         }
