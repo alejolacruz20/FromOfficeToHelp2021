@@ -1862,7 +1862,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70638896}
-  - component: {fileID: 70638895}
   - component: {fileID: 70638893}
   m_Layer: 10
   m_Name: PrinterSound
@@ -1881,8 +1880,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 641eb8452122f664d8a917281de98481, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 8ce57d2a7df3a2a48ba23152033d5ef3, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 0.313
   m_Pitch: 1
   Loop: 1
@@ -1891,10 +1890,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 9.974543
-  MaxDistance: 500
+  MinDistance: 0.5
+  MaxDistance: 30
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1927,7 +1926,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1967,19 +1966,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &70638895
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70638892}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 18.03312, y: 4.6540527, z: 6.123024}
-  m_Center: {x: 2.6860962, y: -0.5090943, z: 1.1105384}
 --- !u!4 &70638896
 Transform:
   m_ObjectHideFlags: 0
@@ -1988,7 +1974,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70638892}
   m_LocalRotation: {x: -0, y: 1, z: 0, w: 0.0000014603136}
-  m_LocalPosition: {x: -3.63, y: 0.5362939, z: 0.02}
+  m_LocalPosition: {x: -1, y: 0.5362939, z: 0.02}
   m_LocalScale: {x: -0.777716, y: 0.47474822, z: 0.3176227}
   m_Children: []
   m_Father: {fileID: 1322490623}
@@ -19386,6 +19372,10 @@ PrefabInstance:
       value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 1509579057, guid: 86966470bdcced143ab5830de67fac84, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883293341, guid: 86966470bdcced143ab5830de67fac84, type: 3}
       propertyPath: m_TagString
       value: Walls
       objectReference: {fileID: 0}
